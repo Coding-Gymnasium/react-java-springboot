@@ -1,9 +1,9 @@
-export  default function TodoRowItem(props) {
- return (
+export default function TodoRowItem(props) {
+  return (
     <tr>
-      <th scope='row'>{props.number}</th>
-      <td>{props.task}</td>
-      <td>{props.assignee}</td>
+      <th scope="row">{props.rowNumber}</th>
+      <td>{props.rowDescription}</td>
+      <td>{props.rowAssigned}</td>
     </tr>
- ) 
+  );
 }
