@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import NewTodoForm from "./components/NewTodoForm";
 import TodoTable from "./components/TodoTable";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
         rowDescription: "New todo",
         rowAssigned: "User Three",
       };
-      setTodos(todos => [...todos, newTodo])
+      setTodos((todos) => [...todos, newTodo]);
     }
   };
 
@@ -27,9 +28,7 @@ function App() {
         <div className="card-header">Your Todo's</div>
         <div className="card-body">
           <TodoTable todos={todos} />
-          <button className="btn btn-primary" onClick={addTodo}>
-            Add New To-Do
-          </button>
+          <NewTodoForm />
         </div>
       </div>
     </div>
