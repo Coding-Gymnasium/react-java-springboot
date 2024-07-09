@@ -11,13 +11,13 @@ function App() {
   const [todos, setTodos] = useState(seededTodos);
 
   const addTodo = () => {
-    if (todos.length > 0) {
+    if (seededTodos.length > 0) {
       const newTodo = {
         rowNumber: todos.length + 1,
         rowDescription: "New todo",
         rowAssigned: "User Three",
       };
-      setTodos(newTodo);
+      setTodos(todos => [...todos, newTodo])
     }
   };
 
