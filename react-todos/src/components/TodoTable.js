@@ -8,6 +8,7 @@ export default function TodoTable(props) {
           <th scope="col">#</th>
           <th scope="col">Description</th>
           <th scope="col">Assigned</th>
+          <th className="bi-trash">Delete</th>
         </tr>
       </thead>
       <tbody>
