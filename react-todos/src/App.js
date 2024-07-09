@@ -11,12 +11,12 @@ function App() {
   ];
   const [todos, setTodos] = useState(seededTodos);
 
-  const addTodo = () => {
+  const addTodo = (description, assigned) => {
     if (seededTodos.length > 0) {
       const newTodo = {
         rowNumber: todos.length + 1,
-        rowDescription: "New todo",
-        rowAssigned: "User Three",
+        rowDescription: description,
+        rowAssigned: assigned,
       };
       setTodos((todos) => [...todos, newTodo]);
     }
@@ -28,7 +28,7 @@ function App() {
         <div className="card-header">Your Todo's</div>
         <div className="card-body">
           <TodoTable todos={todos} />
-          <NewTodoForm />
+          <NewTodoForm addTodo={addTodo} />
         </div>
       </div>
     </div>
